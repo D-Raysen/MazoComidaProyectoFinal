@@ -4,39 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:rotationX="-17"
+    android:rotationX="0"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="209dp"
-        android:layout_height="143dp"
-        android:gravity="center"
-        android:rotation="8"
-        android:rotationX="-8"
-        android:rotationY="29"
-        android:text="Hello World!"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="408dp"
+        android:layout_height="49dp"
+        android:text="mensaje"
+        app:backgroundTint="#E41BE2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        tools:layout_editor_absoluteY="1dp" />
 
     <TextView
-        android:layout_width="133dp"
-        android:layout_height="69dp"
-        android:background="#30937F"
+        android:id="@+id/textView"
+        android:layout_width="379dp"
+        android:layout_height="572dp"
+        android:background="#EAE00F"
         android:gravity="center"
-        android:rotationX="38"
-        android:text="hola mundo"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="0"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toTopOf="@+id/Contar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/Contar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="contar"
+        app:backgroundTint="#F300B5"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
