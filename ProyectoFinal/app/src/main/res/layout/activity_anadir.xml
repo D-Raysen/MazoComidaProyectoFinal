@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnadirActivity">
+
+    <Button
+        android:id="@+id/btnAnadir"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="132dp"
+        android:onClick="InsertarComida"
+        android:text="añadir comida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTituloAñadir"
+        android:layout_width="166dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="147dp"
+        android:background="#15D819"
+        android:gravity="center"
+        android:text="Comida a añadir"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextIdComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="113dp"
+        android:autofillHints=""
+        android:backgroundTint="#42DAD5"
+        android:ems="10"
+        android:hint="Id de la comida"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloAñadir" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="115dp"
+        android:autofillHints=""
+        android:backgroundTint="#45C195"
+        android:ems="10"
+        android:hint="nombre de la comida"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextIdComida" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

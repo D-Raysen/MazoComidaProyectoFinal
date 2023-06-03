@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Encabezado"
+        android:textColor="#FF0101"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/textEncabezado"
+        android:text="Titulo" />
+
+    <ScrollView
+        android:id="@+id/Scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textTitulo">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textArticulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web|phone|email"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor purus id mi eleifend, id rutrum tortor porta. Vivamus eu laoreet purus. Quisque vel mauris felis. Integer euismod tristique volutpat. Morbi vel varius lectus, rhoncus fringilla purus. Cras nec rutrum urna. Nullam porttitor efficitur cursus. Maecenas ac lacus id mauris laoreet fermentum. Proin quam libero, sodales ac auctor sit amet, mollis ac justo. Integer finibus nunc at consequat egestas. Cras quis mattis erat, quis pretium dui. Donec gravida tortor eget laoreet convallis. Phasellus blandit nibh ac fringilla venenatis. Etiam non rhoncus enim.  Curabitur commodo nibh nec dignissim bibendum. Praesent congue magna ante, quis faucibus urna laoreet vitae. Donec malesuada rutrum velit at aliquet. Aliquam ut mi sodales, vehicula odio ac, tincidunt metus. Nulla ac risus diam. Ut non ultricies nulla, id fermentum turpis. Nulla pellentesque eleifend malesuada. Quisque lorem elit, condimentum at placerat non, aliquet eu neque. Sed at risus eu libero pulvinar placerat nec vitae nisl. Nulla sed interdum arcu. Sed non varius nulla.  Proin euismod ex in lacus sodales mattis. Pellentesque enim lectus, molestie vel scelerisque eget, vulputate quis mauris. Vivamus nisi ante, blandit ullamcorper enim a, condimentum accumsan odio. In vitae enim vitae lacus venenatis imperdiet. Donec efficitur vestibulum felis bibendum vestibulum. Duis efficitur nunc vitae tellus bibendum posuere. Aliquam varius turpis tempus sagittis pharetra. Morbi sit amet diam ultrices, finibus nulla ut, vestibulum neque. Vestibulum eu nisl maximus, ultricies orci sed, sagittis enim. Nunc lacinia, dolor ac rutrum suscipit, ligula orci ullamcorper orci, ac interdum ex turpis sit amet nisi. Donec vitae dapibus leo. Nunc erat libero, aliquet vel dolor a, placerat posuere dui. Curabitur viverra metus vitae condimentum accumsan. Sed tincidunt, ex sed aliquam ullamcorper, turpis sapien blandit ipsum, quis elementum arcu enim ut erat.  Aenean in dignissim risus. Praesent vel justo vel orci tempor aliquam. Donec ultrices risus at egestas iaculis. Sed cursus imperdiet ex, vel fermentum leo euismod quis. Nullam sagittis enim dolor, eget aaaaus tortor pulvinar vitae. Maecenas sed cursus ante, in placerat sapien. Maecenas nisl eros, pellentesque quis purus et, efficitur semper nisi. Nullam ac eros at dolor commodo pulvinar. In eleifend lacus vel augue maximus, sit amet tempus massa porttitor. Nullam vel pellentesque sapien. In lorem urna, volutpat ac varius vel, pretium nec metus. Pellentesque mattis nunc nunc, non tempus odio malesuada a. Quisque sollicitudin, enim nec luctus porta, augue nibh sollicitudin felis, tristique cursus tellus libero vitae nibh. Praesent suscipit imperdiet erat in viverra. Aliquam pellentesque sit amet orci at facilisis.  Aliquam rutrum lorem non volutpat tempor. Quisque mollis interdum diam quis pulvinar. Curabitur est nibh, bibendum quis risus eu, lacinia cursus quam. Fusce aliquam lorem sed libero imperdiet egestas sit amet id est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse id elit posuere, posuere nisi a, rutrum erat. Duis non mi eget arcu laoreet mattis at ac urna. Integer fringilla vestibulum lectus, a fringilla enim faucibus nec. Nulla facilisi. Praesent pellentesque sollicitudin euismod. Nullam eu nisi nisi. Donec sodales faucibus mauris eget mattis." />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

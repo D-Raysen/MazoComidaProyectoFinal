@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "402686610587",
+    "firebase_url": "https://mazocomida-default-rtdb.firebaseio.com",
+    "project_id": "mazocomida",
+    "storage_bucket": "mazocomida.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402686610587:android:07d7f62aa556bd11dbca3e",
+        "android_client_info": {
+          "package_name": "com.danieleloy.mazocomida"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402686610587-dn095ulekkdal5mm8dtq6581mcsou225.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwZKyHD-9scz6_yLM20HeI9IjIH0AAuns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402686610587-dn095ulekkdal5mm8dtq6581mcsou225.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

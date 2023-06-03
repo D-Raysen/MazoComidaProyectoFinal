@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731316881661",
+    "project_id": "proyectofirebasedanieleloy",
+    "storage_bucket": "proyectofirebasedanieleloy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731316881661:android:9fc3a5e1bde9e813c35694",
+        "android_client_info": {
+          "package_name": "com.danieleloy.danieleloyproyectofirebasexd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpcLwFqPysp5dCVpKhj4pjPGYt7BA_u5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

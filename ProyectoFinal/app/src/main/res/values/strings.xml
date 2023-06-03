@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MazoComida</string>
+    <string name="mazocomida">MazoComida</string>
+    <string name="todo">TODO</string>
+    <string name="rellene_para_reservar">Rellene para reservar</string>
+    <string name="fecha_y_hora">Fecha y hora</string>
+    <string name="aqu_se_pondr_la_fecha_seleccionada">Aquí se pondrá la fecha seleccionada</string>
+    <string name="reservar">Reservar</string>
+    <string name="logo">TODO</string>
+</resources>
