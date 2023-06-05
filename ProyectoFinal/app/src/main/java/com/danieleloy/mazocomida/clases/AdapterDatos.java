@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -65,6 +66,12 @@ public class AdapterDatos extends RecyclerView.Adapter<ComidaViewHolder> {
         holder.getTxt_item_IdCarne().setText("Id: " + comida1.getIdComida());
 
         //holder.getImg_item_carne().setImageResource(R.drawable.carneimg.jpg);
+
+        String carpeta = "Comida";
+        ImageView imagen = holder.getImg_item_fotoCarne() ;
+        ImagenesFirebase.descargarFoto(carpeta,comida1.getNombreComida(),imagen);
+        ImageView imagen1 = imagen;
+        holder.setImg_item_fotoCarne(imagen1);
     }
 
 
