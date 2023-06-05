@@ -2,7 +2,9 @@ package com.danieleloy.mazocomida;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -11,9 +13,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.Manifest;
+
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,10 +51,21 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText edtBuscar = null;
 
+    private static final int REQUEST_CALL_PHONE = 1;
+    private static final String PHONE_NUMBER = "662126238";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        setTheme(R.style.SplashTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         // Write a message to the database
         /*FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference();
@@ -58,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
         // Obtener la hora actual
         Calendar calendar = Calendar.getInstance();
         int diaActual = calendar.get(Calendar.DAY_OF_MONTH);
+        int mesActual = calendar.get(Calendar.MONTH);
 
-        FechaMenu.setText(String.valueOf(diaActual));
+        FechaMenu.setText("Menú del día " + String.valueOf(diaActual) + " del mes " + mesActual);
 
         rv = (RecyclerView) findViewById(R.id.recyclerView);
         edtBuscar = (EditText) findViewById(R.id.editTextTextBuscar);
@@ -115,6 +134,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
+
 
     public void BotonModoAdmin(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -177,4 +200,59 @@ public class MainActivity extends AppCompatActivity {
     Intent intent = new Intent(MainActivity.this, ReservarActivity.class);
     startActivity(intent);
 }
+
+//método cancelar reserva
+public void CancelarReserva(View view) {
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    builder.setMessage("¿Deseas cancelar tu reserva? Llama a este número: 662 12 62 38")
+            .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    makePhoneCall();
+                }
+            })
+            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.dismiss();
+                }
+            });
+
+    AlertDialog dialog = builder.create();
+    dialog.show();
+}
+
+    private void makePhoneCall() {
+        // Verificar permiso de llamada telefónica
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PHONE);
+        } else {
+            // Realizar la llamada
+            String dial = "tel:" + PHONE_NUMBER;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_CALL_PHONE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Verificar nuevamente el permiso de llamada telefónica
+                if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)
+                        == PackageManager.PERMISSION_GRANTED) {
+                    // Realizar la llamada
+                    String dial = "tel:" + PHONE_NUMBER;
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+                } else {
+                    // Manejar el caso cuando el permiso de llamada telefónica es denegado
+                }
+            } else {
+                // Manejar el caso cuando el permiso de llamada telefónica es denegado
+            }
+        }
+    }
+
+
+
 }

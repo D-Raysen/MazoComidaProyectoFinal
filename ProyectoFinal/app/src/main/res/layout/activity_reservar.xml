@@ -75,13 +75,14 @@
 
     <TextView
         android:id="@+id/txtFechaHoraSeleccionada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
+        android:layout_width="363dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="79dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="175dp"
         android:hint="@string/aqu_se_pondr_la_fecha_seleccionada"
+        android:textAlignment="gravity"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

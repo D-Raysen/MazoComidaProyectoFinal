@@ -20,7 +20,8 @@
             android:layout_weight="1"
             android:contentDescription=""
             android:paddingStart="5dp"
-            android:paddingEnd="0dp" />
+            android:paddingEnd="0dp"
+            app:srcCompat="@drawable/logo_mazo_comida" />
 
         <LinearLayout
             android:layout_width="match_parent"

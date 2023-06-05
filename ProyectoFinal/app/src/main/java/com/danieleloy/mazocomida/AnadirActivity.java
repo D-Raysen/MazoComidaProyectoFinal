@@ -36,7 +36,6 @@ public class AnadirActivity extends AppCompatActivity {
 
         String CodComida = String.valueOf(nuevoIdComida.getText());
         String Nombre = String.valueOf(nuevoNombre.getText());
-        //String TextoPrecio = String.valueOf(nuevoPrecio.getText());
 
         //Ahora pongo los errores si no pones nada
         if (CodComida.isEmpty()){
@@ -45,9 +44,9 @@ public class AnadirActivity extends AppCompatActivity {
         if (Nombre.isEmpty()){
             nuevoNombre.setError("Pon algo");
         }
-       
+
         int idComida = Integer.valueOf(CodComida);
-        
+
 
         //--------------------------------------------------------
         AlertDialog.Builder alerta1 = new AlertDialog.Builder(this);

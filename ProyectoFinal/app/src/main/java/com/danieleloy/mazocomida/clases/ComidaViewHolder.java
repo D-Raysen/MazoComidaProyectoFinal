@@ -59,6 +59,15 @@ public class ComidaViewHolder extends RecyclerView.ViewHolder implements View.On
         this.txt_item_Nombre = txt_item_Nombre;
     }
 
+    public void setImg_item_foto(ImageView img_item_foto) {
+        this.img_item_foto = img_item_foto;
+    }
+
+    /*public void setImagen(String urlImagen) {
+        Glide.with(itemView.getContext())
+                .load(urlImagen)
+                .into(img_item_foto);
+    }*/
 
 
     public ImageView getImg_item_fotoCarne() {

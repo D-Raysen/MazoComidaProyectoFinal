@@ -7,11 +7,13 @@ public class Comida implements Serializable {
     private int idComida;
     private String NombreComida;
 
+    //private String urlImagen; // Nuevo atributo para la URL de la imagen
 
     public Comida(int idComida, String nombreComida) {
         this.idComida = idComida;
         NombreComida = nombreComida;
 
+        //this.urlImagen = urlImagen;
     }
 
     public Comida() {
@@ -32,6 +34,11 @@ public class Comida implements Serializable {
     public void setNombreComida(String nombreComida) {
         NombreComida = nombreComida;
     }
+
+
+    //public String getUrlImagen(){return  urlImagen; }
+
+    //public  void setUrlImagen(String RutaImagen){urlImagen = RutaImagen; }
 
 
 
