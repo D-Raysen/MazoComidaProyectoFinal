@@ -2,8 +2,5 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/fondo_carga" />
 
-    <item
-        android:gravity="center">
-        <bitmap android:src="@drawable/logo_mazo_comida" />
-    </item>
+
 </layer-list>

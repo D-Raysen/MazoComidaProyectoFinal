@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buscarComida(View view) {
 
-        String texto = String.valueOf(edtBuscar.getText());
+        String texto = String.valueOf(edtBuscar.getText()).toLowerCase();
         myRefCOmida1 = FirebaseDatabase.getInstance().getReference("bufe");
         myRefCOmida1.addValueEventListener(new ValueEventListener() {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot keynode : snapshot.getChildren()) {
                     keys1.add(keynode.getKey());
                     Comida c = keynode.getValue(Comida.class);
-                    if(c.getNombreComida().contains(texto)) {
+                    if(c.getNombreComida().toLowerCase().contains(texto)) {
                         Comida1.add(keynode.getValue(Comida.class));
                     }
                 }
@@ -185,7 +185,6 @@ public class MainActivity extends AppCompatActivity {
                 Adapter.notifyDataSetChanged();
 
             }
-
 
             @Override
             public void onCancelled(DatabaseError error) {
