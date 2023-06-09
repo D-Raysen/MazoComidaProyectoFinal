@@ -99,20 +99,6 @@ public class DetallesComida extends AppCompatActivity {
         int idMod = Integer.valueOf(String.valueOf(DetalleId.getText()));
 
 
-
-        /*Comida c = new Comida(Integer.valueOf(idMod), nombreMod, Integer.valueOf(PrecioMod));
-        //--------------------------------------------
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
-        */
-        //.child("menus").child(idMod)
-
-       /* myRef.child("menus").child(nombreAntiguo).removeValue();
-        myRef.child("menus").child(c.getNombreComida()).setValue(c);
-
-            */
-
-
         //--------------------------------------------------
 
         AlertDialog.Builder alerta1 = new AlertDialog.Builder(DetallesComida.this);
