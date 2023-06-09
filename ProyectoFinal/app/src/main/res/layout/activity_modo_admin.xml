@@ -63,13 +63,14 @@
         android:backgroundTint="#B36262"
         android:onClick="BotonModoCliente"
         android:text="Modo Cliente"
-        android:textColor="#4E342E"
+        android:textColor="#EFEFEF"
         app:layout_constraintBottom_toTopOf="@+id/txtFecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txtFecha"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TextContrastCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView"
